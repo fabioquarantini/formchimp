@@ -1,0 +1,93 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	background-color: #5cc1a4;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	color: #fff;
+	text-align: center;
+}
+
+.logo {
+	display: block;
+	margin: 40px auto 0 auto;
+}
+
+form {
+	margin: 30px auto;
+	width: 450px;
+}
+
+label, p {
+	display: block;
+	margin-bottom: 5px;
+	color: #fff;
+	font-weight: bold;
+}
+
+input,
+textarea {
+	margin: 0 0 20px 0;
+	padding: 12px 10px;
+	width: 430px;
+	border: 0;
+	border-radius: 4px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	box-shadow: 5px 5px #49b294;
+	color: #2C3E50;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+input[type="checkbox"] {
+	width: auto;
+	margin-right: 5px;
+}
+
+button {
+	margin-top: 10px;
+	padding: 14px 10px;
+	width: 450px;
+	border: 0;
+	border-radius: 4px;
+	background-color: #24886b;
+	box-shadow: 5px 5px #49b294;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+button:hover{
+	background-color: #2c3e50;
+}
+
+button:active{
+	margin-top: 15px;
+	background-color: #2c3e50;
+	box-shadow: 0px 0px #49b294;
+}
+
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li label { display: inline;}
+
+.mc-response {
+	margin: 25px 0;
+}
+
+.mc-success {
+	color: green;
+}
+
+.mc-error {
+	color: red;
+}
