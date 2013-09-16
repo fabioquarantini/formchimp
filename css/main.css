@@ -16,6 +16,7 @@ h1 {
 }
 
 form {
+	position: relative;
 	margin: 30px auto;
 	width: 450px;
 }
@@ -42,11 +43,12 @@ textarea {
 }
 
 input[type="checkbox"] {
-	width: auto;
 	margin-right: 5px;
+	width: auto;
 }
 
 button {
+	overflow: hidden;
 	margin-top: 10px;
 	padding: 14px 10px;
 	width: 450px;
@@ -72,10 +74,14 @@ button:active{
 	box-shadow: 0px 0px #49b294;
 }
 
+.button-loading {
+	background: #2c3e50 url("../img/loading.gif") center center no-repeat;
+	text-indent: -9999px;
+}
 
 ul {
-	list-style-type: none;
 	padding: 0;
+	list-style-type: none;
 }
 
 li label { display: inline;}
