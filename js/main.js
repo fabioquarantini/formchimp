@@ -1,26 +1,49 @@
 $(document).ready(function() {
 
+	var $form = $("#newsletter-form");
 	var $response = $("<div/>");
-	
-	$("button").on("click", function(e) {
+	var buttonText = $("button").text();
 
-		var responseClasses = "";
-		var $form = $("#newsletter-form");
+	$form.submit( function( event ) {
+
+		var actionUrl = $form.attr('action').replace('/post?', '/post-json?').concat('&c=?');
 		var serializedData = $form.serialize();
+		var $button = $form.find('button');
 		
-		/* Add form action http://kb.mailchimp.com/article/can-i-host-my-own-sign-up-forms. Change "post?" to "post-json?" and add "&c=?" at the end */
-		var actionUrl = 'http://fabioquarantini.us7.list-manage2.com/subscribe/post-json?u=679769a7357f9ee98247a003d&amp;id=cdb15a7d9d&c=?';
+		$button.addClass('button-loading');
+		$form.removeClass();
+		$(".mc-response").remove();
 
-		$form.find('button').addClass('button-loading');
+		function callbackCall ( data) {
 
-		$.post( actionUrl , serializedData, function(data) {
-			responseClasses = "mc-" + data.result + " mc-response";
-			$response.removeClass().addClass(responseClasses).text("").text(data.msg);
+			$form.addClass("mc-" + data.result);
+			$response.removeClass().addClass("mc-response").text("").html(data.msg);
 			$response.appendTo( $form );
-			$form.find('button').removeClass();
-		}, "jsonp");
+			$button.removeClass();
+			
+			if( $form.hasClass('mc-success') ) {
+				$button.text("Thanks");
+			} else {
+				$button.text(buttonText);
+			}
 
-		e.preventDefault();
+		}
+
+		$.ajax({
+
+			url: actionUrl,
+			data: serializedData,
+			success: callbackCall,
+			dataType: 'jsonp'
+
+		});
+
+		event.preventDefault();
+		
 	});
 
 });
+
+
+/* Add form action http://kb.mailchimp.com/article/can-i-host-my-own-sign-up-forms. Change "post?" to "post-json?" and add "&c=?" at the end */
+//var actionUrl = 'http://fabioquarantini.us7.list-manage2.com/subscribe/post-json?u=679769a7357f9ee98247a003d&amp;id=cdb15a7d9d&c=?';

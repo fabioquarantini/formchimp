@@ -3,6 +3,20 @@
 body {
 	background-color: #5cc1a4;
 	font-family: 'Open Sans', sans-serif;
+	position: relative;
+	animation: animationIn .6s ease both;
+	animation-delay: 0.8s;
+}
+
+@keyframes animationIn {
+	0% {
+		top:-47px;
+		opacity: 0;
+	}
+	100% {
+		top:0;
+		opacity:1;
+	}
 }
 
 h1 {
@@ -18,7 +32,7 @@ h1 {
 form {
 	position: relative;
 	margin: 30px auto;
-	width: 450px;
+	max-width: 450px;
 }
 
 label, p {
@@ -31,11 +45,11 @@ label, p {
 input,
 textarea {
 	margin: 0 0 20px 0;
-	padding: 12px 10px;
-	width: 430px;
+	padding: 12px 5%;
+	width: 90%;
 	border: 0;
 	border-radius: 4px;
-	background: none repeat scroll 0 0 #FFFFFF;
+	background-color:#FFFFFF;
 	box-shadow: 5px 5px #49b294;
 	color: #2C3E50;
 	font-size: 20px;
@@ -45,13 +59,15 @@ textarea {
 input[type="checkbox"] {
 	margin-right: 5px;
 	width: auto;
+	background-color: transparent;
+	box-shadow: none;
 }
 
 button {
 	overflow: hidden;
 	margin-top: 10px;
-	padding: 14px 10px;
-	width: 450px;
+	padding: 14px 5%;
+	width: 100%;
 	border: 0;
 	border-radius: 4px;
 	background-color: #24886b;
@@ -61,7 +77,6 @@ button {
 	font-size: 20px;
 	font-family: 'Open Sans', sans-serif;
 	cursor: pointer;
-	transition: all 0.3s;
 }
 
 button:hover{
@@ -88,6 +103,16 @@ li label { display: inline;}
 
 .mc-response {
 	margin: 25px 0;
+	animation: fadeIn .6s ease both;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity:1;
+	}
 }
 
 .mc-success {
@@ -96,4 +121,23 @@ li label { display: inline;}
 
 .mc-error {
 	color: red;
+	animation: formError .4s ease both;
+}
+
+@keyframes formError {
+	0% {
+		left:-3em;
+	}
+	25% {
+		left:3em;
+	}
+	50% {
+		left:-3em;
+	}
+	75% {
+		left:3em;
+	}
+	100% {
+		left:0;
+	}
 }
