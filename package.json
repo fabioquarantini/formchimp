@@ -8,6 +8,10 @@
 		"url": "http://www.fabioquarantini.com",
 		"twitter" : "@febba"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fabioquarantini/formchimp.git"
+	},
 	"licenses":	{
 		"type": "MIT",
 		"url": "http://opensource.org/licenses/MIT"
