@@ -1,0 +1,19 @@
+{
+	"name": "formchimp",
+	"title": "FormChimp",
+	"description": "A customizable MailChip plugin for jQuery",
+	"version": "0.1.0",
+	"author": {
+		"name": "Fabio Quarantini",
+		"url": "http://www.fabioquarantini.com",
+		"twitter" : "@febba"
+	},
+	"licenses":	{
+		"type": "MIT",
+		"url": "http://opensource.org/licenses/MIT"
+	},
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-contrib-uglify": "~0.2.0"
+	}
+}

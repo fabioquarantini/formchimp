@@ -1,11 +1,11 @@
 /*  ==========================================================================
 
-	jQuery FormChimp - v1.0 - 19-09-2013
-	Description plugin
+	jQuery FormChimp - v1.0
+	A customizable MailChip plugin for jQuery
 	Copyright (c) 2013 Fabio Quarantini - @febba
 	http://www.fabioquarantini.com 
 	Contributors: Daniel Duches - @ildaniel8
-	license: http://www.opensource.org/licenses/mit-license.php
+	license: http://opensource.org/licenses/MIT
 
 	==========================================================================  */
 
@@ -22,12 +22,12 @@
 		var $response;
 
 		var defaults = {
-			'url': actionUrl,
-			'buttonText': '',
 			'appendElement': $(this),
+			'buttonText': '',
+			'errorMessage': '',
 			'responseClass': "mc-response",
 			'successMessage': '',
-			'errorMessage': '',
+			'url': actionUrl,
 		};
 
 		$.extend(defaults, settings);
