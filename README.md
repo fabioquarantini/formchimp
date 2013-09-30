@@ -4,7 +4,7 @@ A customizable MailChimp plugin for jQuery
 
 ## Usage
 
-1. Add MailChimp url to the form
+1. Add MailChimp url to the form action
 
 	```html
 	<form action="ADD MAILCHIMP URL">
