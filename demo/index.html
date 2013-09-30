@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>	
+		<meta charset="utf-8">
+		<title>FormChimp - MailChimp ajax form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	
+	<body>
+
+		<img src="http://mailchimp.com/assets/images/freddie.3709621481.svg" alt="MailChimp ajax form" width="110" height="110" class="logo">
+		
+		<h1>FormChimp</h1>
+		<h2>MailChimp ajax form</h2>
+
+		<form id="newsletter-form" name="newsletter-form" method="post" action="http://fabioquarantini.us7.list-manage2.com/subscribe/post?u=679769a7357f9ee98247a003d&amp;id=cdb15a7d9d">
+
+			<label for="email">Email*:</label>
+			<input id="email" name="EMAIL" type="email" value="" />
+
+			<label for="name">Name*:</label>
+			<input id="name" name="FNAME" type="text" value="" />
+
+			<p>Group:</p>
+			<ul>
+				<li>
+					<input type="checkbox" value="1" name="group[4457][1]" id="group-1">
+					<label for="group-1">Test</label></li>
+				<li>
+					<input type="checkbox" value="2" name="group[4457][2]" id="group-2">
+					<label for="group-2">Test 2</label>
+				</li>
+			</ul>
+			
+			<button type="submit" value="Subscribe">Subscribe</button>
+
+		</form>
+
+ 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ 		<script src="../jquery.formchimp.js"></script>
+ 		<script src="js/main.js"></script>
+
+	</body>
+
+</html>
