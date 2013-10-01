@@ -1,15 +1,15 @@
-# jQuery ChimpForm
+# jQuery FormChimp
 
-A customizable MailChimp plugin for jQuery
+A customizable MailChimp ajax plugin for jQuery
 
 ## Usage
 
-1. Add MailChimp url to the form action
+1. Create a form with the required attributes ( form action and input name. [Where do i find them?](http://kb.mailchimp.com/article/can-i-host-my-own-sign-up-forms))
 
 	```html
 	<form action="ADD MAILCHIMP URL">
 		<label for="email">Email*:</label>
-		<input id="email" name="EMAIL" type="email" value="" />		
+		<input id="email" name="ADD MAILCHIMP NAME ATTRIBUTE" type="email" value="" />		
 		<button type="submit" value="Subscribe">Subscribe</button>
 	</form>
 	```
@@ -31,6 +31,39 @@ A customizable MailChimp plugin for jQuery
 	```javascript	
 	$(".form-class").formchimp();
 	```
+
+## Properties
+
+### appendElement:
+*Selector*:  Declare where the new element, containing the messages from Mailchimp will be appended to.
+
+*Default*: `$(this)`
+
+### buttonText:
+*String*: The message to be written on the submit button after a successful subscription.
+
+*Default*: `''`
+
+### errorMessage:
+*String*: Set custom error message given when return an error.
+
+*Default*: `''`
+
+### responseClass:
+*Selector*: Declare custom element in page for error output
+
+*Default*: `mc-response`
+
+### successMessage:
+*String*: Set a custom success message.
+
+*Default*: `''`
+
+### url:
+*String*: The mailchip list subscription url, to get the JSONP address just change 'post'' to 'post-json' and append '&c=?' at the end
+
+*Default*: `form action attribute`
+
 
 ## License
 
