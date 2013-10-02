@@ -1,0 +1,17 @@
+{
+  "name": "formchimp",
+  "version": "1.0",
+  "main": "jquery.formchimp.js",
+  "ignore": [
+    "demo/",
+    "**/.*",
+    "*.md",
+    "**/*.txt",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json"
+  ],
+  "dependencies": {
+    "jquery": ">=1.8.0"
+  }
+}
