@@ -5,19 +5,19 @@ A customizable MailChimp ajax plugin for jQuery
 ##Install
 Choose one of the following methods:
 
-#### Download source files
+**Download source files**
 
 - [jquery.formchimp.min.js](https://raw.github.com/fabioquarantini/formchimp/master/jquery.formchimp.min.js)
 - [jquery.formchimp.js](https://raw.github.com/fabioquarantini/formchimp/master/jquery.formchimp.js)
 
 
-#### Git clone
+**Git clone**
 
 ``` bash
 git clone https://github.com/fabioquarantini/formchimp.git
 ```
 
-#### Bower
+**Bower**
 
 ``` bash
 bower install formchimp
@@ -86,6 +86,9 @@ bower install formchimp
 
 *Default*: `form action attribute`
 
+## Credits
+
+Copyright (c) 2013 Fabio Quarantini
 
 ## License
 
