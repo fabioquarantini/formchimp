@@ -2,6 +2,27 @@
 
 A customizable MailChimp ajax plugin for jQuery
 
+##Install
+Choose one of the following methods:
+
+#### Download source files
+
+- [jquery.formchimp.min.js](https://raw.github.com/fabioquarantini/formchimp/master/jquery.formchimp.min.js)
+- [jquery.formchimp.js](https://raw.github.com/fabioquarantini/formchimp/master/jquery.formchimp.js)
+
+
+#### Git clone
+
+``` bash
+git clone https://github.com/fabioquarantini/formchimp.git
+```
+
+#### Bower
+
+``` bash
+bower install formchimp
+```
+
 ## Usage
 
 1. Create a form with the required attributes ( form action and input name. [Where do i find them?](http://kb.mailchimp.com/article/can-i-host-my-own-sign-up-forms))
@@ -32,34 +53,35 @@ A customizable MailChimp ajax plugin for jQuery
 	$(".form-class").formchimp();
 	```
 
+
 ## Properties
 
-### appendElement:
+#### appendElement:
 *Selector*:  Declare where the new element, containing the messages from Mailchimp will be appended to.
 
 *Default*: `$(this)`
 
-### buttonText:
+#### buttonText:
 *String*: The message to be written on the submit button after a successful subscription.
 
 *Default*: `''`
 
-### errorMessage:
+#### errorMessage:
 *String*: Set custom error message given when return an error.
 
 *Default*: `''`
 
-### responseClass:
+#### responseClass:
 *Selector*: Declare custom element in page for error output
 
 *Default*: `mc-response`
 
-### successMessage:
+#### successMessage:
 *String*: Set a custom success message.
 
 *Default*: `''`
 
-### url:
+#### url:
 *String*: The mailchip list subscription url, to get the JSONP address just change 'post'' to 'post-json' and append '&c=?' at the end
 
 *Default*: `form action attribute`
