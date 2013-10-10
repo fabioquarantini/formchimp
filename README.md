@@ -1,8 +1,26 @@
 # jQuery FormChimp
 
-A customizable MailChimp ajax plugin for jQuery
+A customizable MailChimp ajax plugin for jQuery, provides an easy and lightweight way to let your users sign up to your MailChimp list. 
+
+
+####Features
+
+- Customizable Error and Success messages.
+- Ability to specify which element the output should be appended to, if it exists or where the element should be created
+- Automatically transforms the mailchimp signup url in the JSONP format
+- Changes the value of the button if the response is successful
+- This solution is language agnostic, only dependency is jQuery.
+- is AJAX-enabled, but degrades gracefully if Javascript isn't turned on
+- Multiple sign-up forms, for multiple lists.
+
+
+####Demo
+
+Checkout the demo at [http://www.fabioquarantini.com/formchimp/](http://www.fabioquarantini.com/formchimp/)
+
 
 ##Install
+
 Choose one of the following methods:
 
 **Download source files**
@@ -22,6 +40,7 @@ git clone https://github.com/fabioquarantini/formchimp.git
 ``` bash
 bower install formchimp
 ```
+
 
 ## Usage
 
@@ -72,7 +91,7 @@ bower install formchimp
 *Default*: `''`
 
 #### responseClass:
-*Selector*: Declare custom element in page for error output
+*Selector*: Declare custom element in page for error output.
 
 *Default*: `mc-response`
 
@@ -82,13 +101,13 @@ bower install formchimp
 *Default*: `''`
 
 #### url:
-*String*: The mailchip list subscription url, to get the JSONP address just change 'post'' to 'post-json' and append '&c=?' at the end
+*String*: The mailchip list subscription url, to get the JSONP address just change `post` to `post-json` and append `&c=?` at the end.
 
 *Default*: `form action attribute`
 
 ## Credits
 
-Copyright (c) 2013 Fabio Quarantini
+Copyright (c) 2013 Fabio Quarantini | Contributors: [Daniel Duches](https://github.com/danielhq/)
 
 ## License
 

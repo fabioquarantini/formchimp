@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
+	margin: 0;
+	padding: 0;
 	position: relative;
 	background-color: #5cc1a4;
 	font-family: 'Open Sans', sans-serif;
@@ -43,13 +45,14 @@ h1 {
 h2 {
 	color: #10775a;
 	text-align: center;
-	font-size: 24px;
+	font-size: 22px;
 	margin-top: 0;
 }
 
 .logo {
 	display: block;
-	margin: 40px auto 0 auto;
+	margin: 0 auto;
+	padding-top: 40px;
 }
 
 form {
@@ -209,4 +212,11 @@ li label {
 	100% {
 		left: 0;
 	}
+}
+
+.github {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
 }
