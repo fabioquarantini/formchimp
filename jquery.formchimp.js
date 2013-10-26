@@ -1,6 +1,6 @@
 /*  ==========================================================================
 
-	jQuery FormChimp - v1.0.0
+	jQuery FormChimp - v1.0.1
 	A customizable MailChimp ajax plugin for jQuery
 	Copyright (c) 2013 Fabio Quarantini - @febba
 	http://www.fabioquarantini.com 
