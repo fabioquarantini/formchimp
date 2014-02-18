@@ -6,12 +6,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
-		/* Reads dependencies from package.json */
-
 		pkg: grunt.file.readJSON('package.json'),
-
-		
-		/* [ grunt uglify ] Javascript plugins compressor (https://github.com/gruntjs/grunt-contrib-uglify) */
 
 		uglify: {
 			options: {
@@ -22,7 +17,7 @@ module.exports = function(grunt) {
 					'jquery.<%= pkg.name %>.min.js': ['jquery.<%= pkg.name %>.js']
 				}
 			}
-		},
+		}
 
 	});
 
@@ -31,6 +26,6 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', [ 'uglify']);
+	grunt.registerTask('default', [ 'uglify' ]);
 
 };

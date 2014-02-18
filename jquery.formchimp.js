@@ -2,8 +2,8 @@
 
 	jQuery FormChimp - v1.0.1
 	A customizable MailChimp ajax plugin for jQuery
-	Copyright (c) 2013 Fabio Quarantini - @febba
-	http://www.fabioquarantini.com 
+	Copyright (c) 2014 Fabio Quarantini - @febba
+	http://www.fabioquarantini.com
 	Contributors: Daniel Duches - @ildaniel8
 	license: http://opensource.org/licenses/MIT
 
@@ -65,7 +65,7 @@
 					if (defaults.errorMessage.length > 0) {
 						responseMessage = defaults.errorMessage;
 					}
-					
+
 				}
 
 				$response.show().html(responseMessage);

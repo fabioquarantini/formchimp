@@ -17,7 +17,7 @@
 		"url": "http://opensource.org/licenses/MIT"
 	},
 	"devDependencies": {
-		"grunt": "~0.4.1",
-		"grunt-contrib-uglify": "~0.2.0"
+		"grunt": "~0.4.2",
+		"grunt-contrib-uglify": "~0.3.2"
 	}
 }
