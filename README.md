@@ -1,6 +1,6 @@
 # jQuery FormChimp
 
-A customizable MailChimp ajax plugin for jQuery, provides an easy and lightweight way to let your users sign up to your MailChimp list. 
+A customizable MailChimp ajax plugin for jQuery, provides an easy and lightweight way to let your users sign up to your MailChimp list.
 
 
 ####Features
@@ -49,7 +49,7 @@ bower install formchimp
 	```html
 	<form action="ADD MAILCHIMP URL">
 		<label for="email">Email*:</label>
-		<input id="email" name="ADD MAILCHIMP NAME ATTRIBUTE" type="email" value="" />		
+		<input id="email" name="ADD MAILCHIMP NAME ATTRIBUTE" type="email" value="" />
 		<button type="submit" value="Subscribe">Subscribe</button>
 	</form>
 	```
@@ -68,7 +68,7 @@ bower install formchimp
 
 4. Call the plugin:
 
-	```javascript	
+	```javascript
 	$(".form-class").formchimp();
 	```
 
@@ -107,7 +107,7 @@ bower install formchimp
 
 ## Credits
 
-Copyright (c) 2013 [Fabio Quarantini](http://www.fabioquarantini.com) | Contributors: [Daniel Duches](https://github.com/danielhq/)
+Copyright (c) 2014 [Fabio Quarantini](http://www.fabioquarantini.com) | Contributors: [Daniel Duches](https://github.com/danielhq/)
 
 ## License
 
