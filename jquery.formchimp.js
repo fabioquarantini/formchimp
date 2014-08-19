@@ -1,6 +1,6 @@
 /*  ==========================================================================
 
-	jQuery FormChimp - v1.0.3
+	jQuery FormChimp - v1.0.4
 	A customizable MailChimp ajax plugin for jQuery
 	Copyright (c) 2014 Fabio Quarantini - @febba
 	http://www.fabioquarantini.com
@@ -61,6 +61,8 @@
 					}
 
 				} else {
+
+					responseMessage = responseMessage.substring(3);
 
 					if (defaults.errorMessage.length > 0) {
 						responseMessage = defaults.errorMessage;
