@@ -2,7 +2,7 @@
 	"name": "formchimp",
 	"title": "FormChimp",
 	"description": "A customizable MailChimp ajax plugin for jQuery",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"author": {
 		"name": "Fabio Quarantini",
 		"url": "http://www.fabioquarantini.com",
