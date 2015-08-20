@@ -107,7 +107,7 @@ bower install formchimp
 
 ## Credits
 
-Copyright (c) 2014 [Fabio Quarantini](http://www.fabioquarantini.com) | Contributors: [Daniel Duches](https://github.com/danielhq/)
+Copyright (c) 2015 [Fabio Quarantini](http://www.fabioquarantini.com) | Contributors: [Daniel Duches](https://github.com/danielhq/)
 
 ## License
 
