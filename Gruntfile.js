@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
 		uglify: {
 			options: {
-				banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> - <%= pkg.author.url %> | Released under the <%= pkg.licenses.type %> license */\n'
+				banner: '/*! <%= pkg.title %> v<%= pkg.version %> | <%= pkg.author.name %> - <%= pkg.author.url %> */\n'
 			},
 			my_target: {
 				files: {

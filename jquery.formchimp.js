@@ -2,10 +2,8 @@
 
 	jQuery FormChimp - v1.2.0
 	A customizable MailChimp ajax plugin for jQuery
-	Copyright (c) Fabio Quarantini - @febba
-	http://www.fabioquarantini.com
-	Contributors: Daniel Duches - @ildaniel8
-	license: http://opensource.org/licenses/MIT
+	Fabio Quarantini - @febba
+	http://www.fabioquarantini.com/formchimp/
 
 	==========================================================================  */
 

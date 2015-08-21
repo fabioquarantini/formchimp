@@ -73,7 +73,18 @@ bower install formchimp
 	```
 
 
-## Properties
+## Settings
+FormChimp accepts settings from an object of key/value pairs.
+
+##### Example:
+```javascript
+$(".form-selector").formchimp({
+	key: value,
+	key: value
+});
+```
+
+## List of settings
 
 #### appendElement:
 *Selector*: Declare where the new element, containing the messages from Mailchimp will be appended to.
@@ -132,15 +143,12 @@ These event hooks fire at the same time as their corresponding callbacks (ie. on
 
 `mailChimpError` : This event is triggered on Mailchip errors
 
-#### Example:
+##### Example:
 ```javascript
 $( document ).on( 'mailChimpSuccess', function() {
 	// Your code here
 });
 ```
-## Credits
-
-Copyright (c) 2015 [Fabio Quarantini](http://www.fabioquarantini.com) | Contributors: [Daniel Duches](https://github.com/danielhq/)
 
 ## License
 
