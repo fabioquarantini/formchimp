@@ -74,8 +74,10 @@
 				// Save the Mailchimp data
 				var responseMessage = data.msg;
 
+				// If the message start with a number e contain "-"
 				if( !isNaN(responseMessage.charAt(0)) && responseMessage.charAt(2) === '-' ) {
 
+					// Remove first 3 characters
 					responseMessage = responseMessage.substring(3);
 
 				}
