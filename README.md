@@ -152,4 +152,4 @@ $( document ).on( 'mailChimpSuccess', function() {
 
 ## License
 
-[MIT License](http://opensource.org/licenses/MIT)
+[MIT License](http://opensource.org/licenses/MIT) - [Fabio Quarantini](http://www.fabioquarantini.com)
