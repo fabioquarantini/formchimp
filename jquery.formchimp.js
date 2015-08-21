@@ -71,7 +71,7 @@
 					console.log( JSON.stringify(data) );
 				}
 
-				// Recupero i messaggi che ritorna mailchimp
+				// Save the Mailchimp data
 				var responseMessage = data.msg;
 
 				// Add status class and remove the loading class
