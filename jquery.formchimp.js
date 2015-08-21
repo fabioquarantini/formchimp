@@ -24,7 +24,7 @@
 			'errorMessage': '',						// Set custom error message given when return an error.
 			'onMailChimpSuccess': function() {},	// Callback that fires on success.
 			'onMailChimpError': function() {},		// Callback that fires on errors.
-			'responseClass': "mc-response",			// Declare custom element in page for error output.
+			'responseClass': "mc-response",			// Declare custom element in page for message output.
 			'successMessage': '',					// Set a custom success message.
 			'url': actionUrl,						// The mailchip list subscription url, to get the JSONP address just change `post` to `post-json` and append `&c=?` at the end.
 		};
