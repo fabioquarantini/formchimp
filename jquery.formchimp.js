@@ -1,6 +1,6 @@
 /*  ==========================================================================
 
-	jQuery FormChimp - v1.0.5
+	jQuery FormChimp - v1.1.0
 	A customizable MailChimp ajax plugin for jQuery
 	Copyright (c) Fabio Quarantini - @febba
 	http://www.fabioquarantini.com
@@ -10,81 +10,114 @@
 	==========================================================================  */
 
 
-;(function($, window, document, undefined) {
+;( function( $, window, document, undefined ) {
 
-	$.fn.formchimp = function(settings) {
+	$.fn.formchimp = function( settings ) {
 
 		var $form = $(this);
-		var $body = $("body");
-		var $button = $form.find('[type="submit"]');
-		var buttonText = $button.text();
+		var $body = $('body');
 		var actionUrl = $form.attr('action').replace('/post?', '/post-json?').concat('&c=?');
-		var $response;
-
+		var $button = $form.find('[type="submit"]');
 		var defaults = {
-			'appendElement': $(this),
-			'buttonText': '',
-			'errorMessage': '',
-			'responseClass': "mc-response",
-			'successMessage': '',
-			'url': actionUrl,
+			'appendElement': $form,			// Declare where the new element, containing the messages from Mailchimp will be appended to.
+			'buttonSelector': $button,
+			'buttonText': '', 				// The message to be written on the submit button after a successful subscription.
+			'errorMessage': '',				// Set custom error message given when return an error.
+			'responseClass': "mc-response", // Declare custom element in page for error output.
+			'successMessage': '',			// Set a custom success message.
+			'url': actionUrl,				// The mailchip list subscription url, to get the JSONP address just change `post` to `post-json` and append `&c=?` at the end.
 		};
+		var originalButtonText = defaults.buttonSelector.text();
 
-		$.extend(defaults, settings);
+		// Merge default whith settings
+		$.extend( defaults, settings );
 
-		$form.submit(function(event) {
+		// On submit
+		$( $form ).on( 'submit', function( event ) {
 
-			var serializedData = $form.serialize();
+			// Disable default action of submit
+			event.preventDefault();
 
-			if ($("." + defaults.responseClass).length === 0) {
-				$response = $('<div/>').addClass(defaults.responseClass).appendTo(defaults.appendElement);
-			}
-
-			$response.html('').hide();
+			// Remove status class and add the loading
 			$body.removeClass('mc-success mc-error').addClass('mc-loading');
 
-			function callbackFunction(data) {
+			// If the response container does not exists
+			if ( $("." + defaults.responseClass).length === 0 ) {
 
+				// Add response container to append element
+				$responseContainer = $('<div/>').addClass( defaults.responseClass ).appendTo( defaults.appendElement );
+
+			} else {
+
+				// Remove old message
+				$responseContainer.html('');
+
+			}
+
+			// Perform an Ajax request
+			$.ajax({
+
+				url: defaults.url,
+				data: $form.serialize(),
+				dataType: 'jsonp'
+
+			}).done( function( data ) {
+
+				// Only for debug
+				// console.log( JSON.stringify(data) );
+
+				// Recupero i messaggi che ritorna mailchimp
 				var responseMessage = data.msg;
-				var errorCode;
-				$button.text(buttonText);
-				$body.addClass("mc-" + data.result).removeClass('mc-loading');
 
-				if (data.result === "success") {
+				// Add status class and remove the loading class
+				$body.addClass('mc-' + data.result).removeClass('mc-loading');
 
-					if (defaults.successMessage.length > 0) {
+				// If the Mailchimp result is success
+				if ( data.result === 'success' ) {
+
+					// If success message parameter is not empty
+					if ( defaults.successMessage !== '' ) {
+
+						// Replace the default success message with parameter
 						responseMessage = defaults.successMessage;
+
 					}
 
-					if (defaults.buttonText.length > 0) {
-						$button.text(defaults.buttonText);
+					// If button text parameter is not empty
+					if ( defaults.buttonText !== '' ) {
+
+						// Replace the default button text with parameter
+						defaults.buttonSelector.text(defaults.buttonText);
+
 					}
 
-				} else {
+				} else { // If there is an error
 
-					if (defaults.errorMessage.length > 0) {
+					// If error message parameter is not empty
+					if ( defaults.errorMessage !== '' ) {
+
+						// Replace the default error message with parameter
 						responseMessage = defaults.errorMessage;
+
+					}
+
+					// If button text parameter is not empty
+					if ( defaults.buttonText !== '' ) {
+
+						// Replace the default button text with the original text
+						defaults.buttonSelector.text(originalButtonText);
+
 					}
 
 				}
 
-				$response.show().html(responseMessage);
-
-			}
-
-			$.ajax({
-
-				url: actionUrl,
-				data: serializedData,
-				success: callbackFunction,
-				dataType: 'jsonp'
+				// Show the message
+				$responseContainer.html(responseMessage);
 
 			});
-
-			event.preventDefault();
 
 		});
 
 	};
 
-})(jQuery, window, document);
+})( jQuery, window, document );

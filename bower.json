@@ -1,6 +1,6 @@
 {
   "name": "formchimp",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "main": "jquery.formchimp.js",
   "authors": [
     { "name": "Fabio Quarantini", "homepage": "http://www.fabioquarantini.com" }
