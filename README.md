@@ -90,6 +90,11 @@ bower install formchimp
 
 *Default*: `''`
 
+#### debug:
+*String*: Activate debug message in console.
+
+*Default*: `false`
+
 #### errorMessage:
 *String*: Set custom error message given when return an error.
 

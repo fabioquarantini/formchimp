@@ -1,6 +1,6 @@
 /*  ==========================================================================
 
-	jQuery FormChimp - v1.1.0
+	jQuery FormChimp - v1.1.1
 	A customizable MailChimp ajax plugin for jQuery
 	Copyright (c) Fabio Quarantini - @febba
 	http://www.fabioquarantini.com
@@ -22,6 +22,7 @@
 			'appendElement': $form,			// Declare where the new element, containing the messages from Mailchimp will be appended to.
 			'buttonSelector': $button,		// Set the button selector.
 			'buttonText': '', 				// The message to be written on the submit button after a successful subscription.
+			'debug': false, 				// Activate debug message in console.
 			'errorMessage': '',				// Set custom error message given when return an error.
 			'responseClass': "mc-response",	// Declare custom element in page for error output.
 			'successMessage': '',			// Set a custom success message.
@@ -63,8 +64,12 @@
 
 			}).done( function( data ) {
 
-				// Only for debug
-				// console.log( JSON.stringify(data) );
+				// If debug is active
+				if ( defaults.debug ) {
+
+					// Log in cosole the Mailchimp data
+					console.log( JSON.stringify(data) );
+				}
 
 				// Recupero i messaggi che ritorna mailchimp
 				var responseMessage = data.msg;
