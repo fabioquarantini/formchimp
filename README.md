@@ -44,7 +44,7 @@ bower install formchimp
 
 ## Usage
 
-1. Create a form with the required attributes ( form action and input name. [Where do i find them?](http://kb.mailchimp.com/article/can-i-host-my-own-sign-up-forms))
+1. Create a form with the required attributes ( form action and input name. [Where do i find them?](http://kb.mailchimp.com/article/can-i-host-my-own-sign-up-forms) )
 
 	```html
 	<form action="ADD MAILCHIMP URL">
@@ -100,6 +100,16 @@ bower install formchimp
 
 *Default*: `''`
 
+#### onMailChimpSuccess:
+*Function*: Callback that fires on MailChimp success.
+
+*Default*: `function() {}`
+
+#### onMailChimpError:
+*Function*: Callback that fires on MailChimp error.
+
+*Default*: `function() {}`
+
 #### responseClass:
 *Selector*: Declare custom element in page for error output.
 
@@ -115,6 +125,19 @@ bower install formchimp
 
 *Default*: `form action attribute`
 
+## Event Hooks
+These event hooks fire at the same time as their corresponding callbacks (ie. onMailChimpSuccess & onMailChimpSuccess),
+
+`mailChimpSuccess` This event is triggered on Mailchip success
+
+`mailChimpError` This event is triggered on Mailchip errors
+
+#### Example:
+```javascript
+$( document ).on( 'mailChimpSuccess', function() {
+	// Your code here
+});
+```
 ## Credits
 
 Copyright (c) 2015 [Fabio Quarantini](http://www.fabioquarantini.com) | Contributors: [Daniel Duches](https://github.com/danielhq/)

@@ -1,6 +1,6 @@
 /*  ==========================================================================
 
-	jQuery FormChimp - v1.1.1
+	jQuery FormChimp - v1.2.0
 	A customizable MailChimp ajax plugin for jQuery
 	Copyright (c) Fabio Quarantini - @febba
 	http://www.fabioquarantini.com
@@ -19,14 +19,16 @@
 		var actionUrl = $form.attr('action').replace('/post?', '/post-json?').concat('&c=?');
 		var $button = $form.find('[type="submit"]');
 		var defaults = {
-			'appendElement': $form,			// Declare where the new element, containing the messages from Mailchimp will be appended to.
-			'buttonSelector': $button,		// Set the button selector.
-			'buttonText': '', 				// The message to be written on the submit button after a successful subscription.
-			'debug': false, 				// Activate debug message in console.
-			'errorMessage': '',				// Set custom error message given when return an error.
-			'responseClass': "mc-response",	// Declare custom element in page for error output.
-			'successMessage': '',			// Set a custom success message.
-			'url': actionUrl,				// The mailchip list subscription url, to get the JSONP address just change `post` to `post-json` and append `&c=?` at the end.
+			'appendElement': $form,					// Declare where the new element, containing the messages from Mailchimp will be appended to.
+			'buttonSelector': $button,				// Set the button selector.
+			'buttonText': '', 						// The message to be written on the submit button after a successful subscription.
+			'debug': false, 						// Activate debug message in console.
+			'errorMessage': '',						// Set custom error message given when return an error.
+			'onMailChimpSuccess': function() {},	// Callback that fires on success.
+			'onMailChimpError': function() {},		// Callback that fires on errors.
+			'responseClass': "mc-response",			// Declare custom element in page for error output.
+			'successMessage': '',					// Set a custom success message.
+			'url': actionUrl,						// The mailchip list subscription url, to get the JSONP address just change `post` to `post-json` and append `&c=?` at the end.
 		};
 		var originalButtonText = defaults.buttonSelector.text();
 
@@ -96,6 +98,12 @@
 
 					}
 
+					// Add event on error
+					$(document).trigger('mailChimpSuccess');
+
+					// Run callback
+					defaults.onMailChimpSuccess.call();
+
 				} else { // If there is an error
 
 					// If error message parameter is not empty
@@ -113,6 +121,12 @@
 						defaults.buttonSelector.text(originalButtonText);
 
 					}
+
+					// Add event on error
+					$(document).trigger('mailChimpError');
+
+					// Run callback
+					defaults.onMailChimpError.call();
 
 				}
 
