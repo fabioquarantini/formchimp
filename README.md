@@ -83,7 +83,7 @@ bower install formchimp
 #### buttonSelector:
 *String*: Set the button selector.
 
-*Default*: `''`
+*Default*: `$form.find('[type="submit"]')`
 
 #### buttonText:
 *String*: The message to be written on the submit button after a successful subscription.
