@@ -69,16 +69,21 @@ bower install formchimp
 4. Call the plugin:
 
 	```javascript
-	$(".form-class").formchimp();
+	$(".form-selector").formchimp();
 	```
 
 
 ## Properties
 
 #### appendElement:
-*Selector*:  Declare where the new element, containing the messages from Mailchimp will be appended to.
+*Selector*: Declare where the new element, containing the messages from Mailchimp will be appended to.
 
 *Default*: `$(this)`
+
+#### buttonSelector:
+*String*: Set the button selector.
+
+*Default*: `''`
 
 #### buttonText:
 *String*: The message to be written on the submit button after a successful subscription.
