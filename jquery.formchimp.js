@@ -20,10 +20,10 @@
 		var $button = $form.find('[type="submit"]');
 		var defaults = {
 			'appendElement': $form,			// Declare where the new element, containing the messages from Mailchimp will be appended to.
-			'buttonSelector': $button,
+			'buttonSelector': $button,		// Set the button selector.
 			'buttonText': '', 				// The message to be written on the submit button after a successful subscription.
 			'errorMessage': '',				// Set custom error message given when return an error.
-			'responseClass': "mc-response", // Declare custom element in page for error output.
+			'responseClass': "mc-response",	// Declare custom element in page for error output.
 			'successMessage': '',			// Set a custom success message.
 			'url': actionUrl,				// The mailchip list subscription url, to get the JSONP address just change `post` to `post-json` and append `&c=?` at the end.
 		};
