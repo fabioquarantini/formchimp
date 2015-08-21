@@ -91,7 +91,7 @@ bower install formchimp
 *Default*: `''`
 
 #### debug:
-*String*: Activate debug message in console.
+*Boolean*: Activate debug message in console.
 
 *Default*: `false`
 
@@ -126,11 +126,11 @@ bower install formchimp
 *Default*: `form action attribute`
 
 ## Event Hooks
-These event hooks fire at the same time as their corresponding callbacks (ie. onMailChimpSuccess & onMailChimpSuccess),
+These event hooks fire at the same time as their corresponding callbacks (ie. onMailChimpSuccess & onMailChimpSuccess)
 
-`mailChimpSuccess` This event is triggered on Mailchip success
+`mailChimpSuccess` : This event is triggered on Mailchip success
 
-`mailChimpError` This event is triggered on Mailchip errors
+`mailChimpError` : This event is triggered on Mailchip errors
 
 #### Example:
 ```javascript
