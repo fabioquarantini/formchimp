@@ -1,6 +1,6 @@
 /*  ==========================================================================
 
-	jQuery FormChimp - v1.2.0
+	jQuery FormChimp - v1.2.1
 	A customizable MailChimp ajax plugin for jQuery
 	Fabio Quarantini - @febba
 	http://www.fabioquarantini.com/formchimp/
@@ -73,6 +73,12 @@
 
 				// Save the Mailchimp data
 				var responseMessage = data.msg;
+
+				if( !isNaN(responseMessage.charAt(0)) && responseMessage.charAt(2) === '-' ) {
+
+					responseMessage = responseMessage.substring(3);
+
+				}
 
 				// Add status class and remove the loading class
 				$body.addClass('mc-' + data.result).removeClass('mc-loading');
