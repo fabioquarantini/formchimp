@@ -44,13 +44,19 @@ bower install formchimp
 
 ## Usage
 
-1. Create a form with the required attributes ( form action and input name. [Where do i find them?](http://kb.mailchimp.com/article/can-i-host-my-own-sign-up-forms) )
+1. Create a form with the required attributes ( form action and input with name attribute. [Where do i find them?](http://kb.mailchimp.com/article/can-i-host-my-own-sign-up-forms) )
 
 	```html
 	<form action="ADD MAILCHIMP URL">
+
 		<label for="email">Email*:</label>
-		<input id="email" name="ADD MAILCHIMP NAME ATTRIBUTE" type="email" value="" />
+		<!-- Replace MERGE0 ( default for email ) with yours *|MERGE|* tags attribute -->
+		<input id="email" name="MERGE0" type="email" value="" />
+
+		<!-- Add any fields you want -->
+
 		<button type="submit" value="Subscribe">Subscribe</button>
+
 	</form>
 	```
 
