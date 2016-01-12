@@ -128,7 +128,7 @@ $(".form-selector").formchimp({
 *Default*: `function() {}`
 
 #### responseClass:
-*Selector*: Declare custom element in page for message output.
+*Selector*: Declare custom element in page for message output. (Set different classes for multiple sign-up forms)
 
 *Default*: `mc-response`
 
