@@ -3,7 +3,7 @@
 A customizable MailChimp ajax plugin for jQuery, provides an easy and lightweight way to let your users sign up to your MailChimp list.
 
 
-####Features
+#### Features
 
 - Customizable Error and Success messages.
 - Ability to specify which element the output should be appended to, if it exists or where the element should be created
@@ -14,12 +14,12 @@ A customizable MailChimp ajax plugin for jQuery, provides an easy and lightweigh
 - Multiple sign-up forms, for multiple lists.
 
 
-####Demo
+#### Demo
 
 Checkout the demo at [http://www.fabioquarantini.com/formchimp/](http://www.fabioquarantini.com/formchimp/)
 
 
-##Install
+## Install
 
 Choose one of the following methods:
 
