@@ -14,11 +14,6 @@ A customizable MailChimp ajax plugin for jQuery, provides an easy and lightweigh
 - Multiple sign-up forms, for multiple lists.
 
 
-#### Demo
-
-Checkout the demo at [http://www.fabioquarantini.com/formchimp/](http://www.fabioquarantini.com/formchimp/)
-
-
 ## Install
 
 Choose one of the following methods:

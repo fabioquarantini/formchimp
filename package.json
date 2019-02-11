@@ -1,8 +1,7 @@
 {
 	"name": "formchimp",
-	"title": "FormChimp",
 	"description": "A customizable MailChimp ajax plugin for jQuery",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"author": {
 		"name": "Fabio Quarantini",
 		"url": "http://www.fabioquarantini.com",
@@ -12,10 +11,7 @@
 		"type": "git",
 		"url": "https://github.com/fabioquarantini/formchimp.git"
 	},
-	"licenses":	{
-		"type": "MIT",
-		"url": "http://opensource.org/licenses/MIT"
-	},
+	"license": "MIT",
 	"devDependencies": {
 		"grunt": "~0.4.5",
 		"grunt-contrib-uglify": "~0.9.1"

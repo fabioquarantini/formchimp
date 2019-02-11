@@ -1,0 +1,64 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true,
+		"jquery": true
+	},
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"rules": {
+		"indent": [
+			"warn",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"linebreak-style": [
+			"warn",
+			"unix"
+		],
+		"quotes": [
+			"warn",
+			"single"
+		],
+		"semi": [
+			"warn",
+			"always"
+		],
+		"max-len": [
+			"warn",
+			{
+				"code": 120,
+				"ignoreUrls": true,
+				"ignoreStrings": true,
+				"ignoreComments": true,
+				"ignoreTemplateLiterals": true
+			}
+		],
+		"space-before-function-paren": [
+			"warn",
+			"never"
+		],
+		"space-in-parens": [
+			"warn",
+			"never"
+		],
+		"key-spacing": [
+			"warn", {
+				"beforeColon": false,
+				"afterColon": true
+			}
+		],
+		"no-unused-vars": "off",
+		"no-console": "off",
+		"no-undef": "off",
+		"no-trailing-spaces": ["error", {
+			"ignoreComments": true
+		}],
+		"padded-blocks": ["error", "never"]
+	}
+}
